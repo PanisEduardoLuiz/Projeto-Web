@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Acesse Aqui</h1>
+        
+        <form id="login-form">
+            <div class="input-group">
+                <label for="Usuario">Usuário</label>
+                <input type="text" id="Usuario" name="Usuario" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Senha">Senha</label>
+                <input type="password" id="Senha" name="Senha" required>
+                <span id="show-password" class="eye-icon" onclick="togglePassword()">👁️</span>
+
+            </div>
+
+            <!-- Caixa de seleção para salvar a senha -->
+            <div class="input-group">
+                <input type="checkbox" id="save-password"> <label for="save-password">Salvar senha</label>
+            </div>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <div class="register-link">
+            <p>Não tem uma conta? <a href="javascript:void(0);" onclick="openRegisterForm()">Cadastre-se</a></p>
+        </div>
+    </div>
+
+    <!-- Tela de Cadastro -->
+    <div id="register-container" class="register-container">
+        <h2>Cadastrar Novo Usuário</h2>
+        <form id="register-form">
+            <div class="input-group">
+                <label for="new-username">Usuário:</label>
+                <input type="text" id="new-username" name="new-username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="new-password">Senha:</label>
+                <input type="password" id="new-password" name="new-password" required>
+            </div>
+
+            <div class="input-group">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+        <div class="close-register">
+            <button onclick="closeRegisterForm()">Fechar</button>
+        </div>
+    </div>
+
+    <script src="jsc.js"></script>
+</body>
+</html>
+
